@@ -2,9 +2,6 @@
 
 class Router
 {
-//    public function __construct(){
-//        echo 'hello, world';
-//    }
 
     protected static $routes = [];
     protected static $route = [];
@@ -62,14 +59,9 @@ class Router
     }
 
     protected static function upperCamelCase($name){
-        // по курсу
-        //$name = str_replace('-', ' ', $name);
-        //$name = ucwords($name, ' ');
-        //$name = str_replace(' ', '', $name);
 
         return str_replace(' ', '', ucwords(str_replace('-', ' ', $name), ' '));
 
-        //моя реализация
         //$name = ucwords($name, '-');
         //$name = str_replace('-', '', $name);
 
