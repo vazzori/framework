@@ -12,6 +12,8 @@ define('APP', dirname(__DIR__) . '/app');
 
 require '../vendor/libs/functions.php';
 
+//debug($_GET);
+
 spl_autoload_register(function ($class){
     $file = ROOT . '/' . str_replace('\\', '/', $class). '.php';
     if(is_file($file)){
@@ -19,7 +21,8 @@ spl_autoload_register(function ($class){
     }
 });
 
-Router::add('^pages/?(?P<action>[a-z-]+)?$', ['controller'  => 'Posts']);
+Router::add('^page/(?P<action>[a-z-]+)/(?P<alias>[a-z-]+)$', ['controller'  => 'Page']);
+Router::add('^page/(?P<alias>[a-z-]+)$', ['controller'  => 'Page', 'action' => 'view']);
 
 //defaults routs
 Router::add('^$', ['controller'  => 'Main', 'action' => 'index']);
