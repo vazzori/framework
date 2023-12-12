@@ -11,6 +11,13 @@ class Main extends App
 //        $this->layout = false;
 //        $this->layout = 'main';
 //        $this->view = 'test';
+        $name = 'test';
+        $hi = 'hello';
+        $colors = [
+            'white' => 'белый',
+            'black' => 'черный'
+        ];
+        $this->set(compact('name', 'hi', 'colors'));
     }
 
 }
