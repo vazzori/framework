@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\Main;
+
 class MainController extends AppController
 {
 
@@ -11,13 +13,17 @@ class MainController extends AppController
 //        $this->layout = false;
 //        $this->layout = 'main';
 //        $this->view = 'test';
-        $name = 'test';
-        $hi = 'hello';
-        $colors = [
-            'white' => 'белый',
-            'black' => 'черный'
-        ];
-        $this->set(compact('name', 'hi', 'colors'));
+
+        $model = new Main;
+//        $res = $model->query("CREATE TABLE posts SELECT * FROM exampleshop.categories");
+//        var_dump($res);
+
+        $posts = $model->findAll();
+
+
+        $hi = 'hi';
+        $this->set(compact('hi', 'posts'));
+
     }
 
 }

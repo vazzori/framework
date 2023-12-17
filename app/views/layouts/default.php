@@ -14,9 +14,11 @@
     <title>DEFAULT</title>
 </head>
 <body>
-<h1>DEFAULT</h1>
 
 <?=$content?>
+
+<?php //= debug(\vendor\core\Db::$countSql) ?>
+<?php //= debug(\vendor\core\Db::$queries) ?>
 
 <!-- Дополнительный JavaScript; выберите один из двух! -->
 

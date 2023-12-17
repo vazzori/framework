@@ -11,7 +11,6 @@
     <title>MAIN</title>
 </head>
 <body>
-<h1>MAIN</h1>
 
 <?= $content ?>
 
