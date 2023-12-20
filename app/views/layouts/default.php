@@ -15,6 +15,22 @@
 </head>
 <body>
 
+<div class="container pt-3 mb-3">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Панель навигации</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <?php foreach($menu as $item): ?>
+                    <a class="nav-link" href="#"><?= $item['title'] ?></a>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </nav>
+</div>
+
 <?=$content?>
 
 <?php //= debug(\vendor\core\Db::$countSql) ?>

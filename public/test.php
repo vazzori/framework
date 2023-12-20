@@ -1,5 +1,5 @@
 <?php
-require 'rb.php';
+require '../vendor/libs/rb.php';
 $db = require '../config/config_db.php';
 
 R::setup($db['dsn'], $db['user'], $db['pass']);
@@ -9,7 +9,7 @@ R::fancyDebug(true);
 
 //create
 //$category = R::dispense('category');
-//$category->title = 'Категория 2';
+//$category->title = 'меню 5';
 //$id = R::store($category);
 //var_dump($id);
 
