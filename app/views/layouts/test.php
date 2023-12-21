@@ -9,29 +9,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
 
-    <title><?= $meta['title'] ?></title>
-    <meta name="description" content="<?= $meta['desc'] ?>">
-    <meta name="keywords" content="<?= $meta['keywords'] ?>">
+
+
+    <title>TEST</title>
 </head>
 <body>
-
-<?php if(!empty($menu)): ?>
-<div class="container pt-3 mb-3">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Панель навигации</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <?php foreach($menu as $item): ?>
-                    <a class="nav-link" href="#"><?= $item['title'] ?></a>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </nav>
-</div>
-<?php endif; ?>
 
 <?=$content?>
 

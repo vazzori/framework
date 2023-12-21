@@ -6,8 +6,8 @@ class PageController extends AppController
 {
 
     public function viewAction(){
-        debug($this->route);
-        echo 'Page::view';
+        $menu = $this->menu;
+        $this->set(compact('menu'));
     }
 
 }
