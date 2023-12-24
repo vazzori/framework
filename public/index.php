@@ -2,6 +2,7 @@
 //error_reporting(-1);
 
 use vendor\core\Router;
+use vendor\core\App;
 
 $query = rtrim( $_SERVER['QUERY_STRING'], '/');
 
@@ -23,6 +24,8 @@ spl_autoload_register(function ($class){
         require_once $file;
     }
 });
+
+new App();
 
 Router::add('^page/(?P<action>[a-z-]+)/(?P<alias>[a-z-]+)$', ['controller'  => 'Page']);
 Router::add('^page/(?P<alias>[a-z-]+)$', ['controller'  => 'Page', 'action' => 'view']);
